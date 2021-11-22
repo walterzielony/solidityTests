@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "retrieveHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "hash",
+						"type": "string"
+					}
+				],
+				"name": "storeHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Guardar y recuperar hash de archivos",
+			"kind": "dev",
+			"methods": {
+				"retrieveHash(uint256)": {
+					"details": "Devuelve el hash de un archivo dado su Identificador",
+					"returns": {
+						"_0": "hash valor de hash para el archivo 'id'"
+					}
+				},
+				"storeHash(uint256,string)": {
+					"details": "Guardar Hash para un archivo dado su Identificador",
+					"params": {
+						"hash": "Hash del archivo",
+						"id": "Identificador del archivo"
+					}
+				}
+			},
+			"title": "Integridad de archivos",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Integridad.sol": "Integridad"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Integridad.sol": {
+			"keccak256": "0x56114118147d94a6055a6de731116f758eb5d46d6540263b44bdad0b8e1ce735",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://778db071b849fd00a325df298f7b5a5a30d70999bb99bcce5ef2eeb62a674f73",
+				"dweb:/ipfs/QmXaPiRUt1ZkmtNCLLyQoA3uwukAbHTaBWRjBJ3CcFmS6u"
+			]
+		}
+	},
+	"version": 1
+}
