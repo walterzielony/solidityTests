@@ -16,9 +16,9 @@
 				"name": "retrieveHash",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "bytes32",
 						"name": "",
-						"type": "string"
+						"type": "bytes32"
 					}
 				],
 				"stateMutability": "view",
@@ -32,12 +32,30 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "string",
+						"internalType": "bytes32",
 						"name": "hash",
-						"type": "string"
+						"type": "bytes32"
 					}
 				],
 				"name": "storeHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "idList",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "hashList",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "storeHashMulti",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -53,12 +71,15 @@
 						"_0": "hash valor de hash para el archivo 'id'"
 					}
 				},
-				"storeHash(uint256,string)": {
+				"storeHash(uint256,bytes32)": {
 					"details": "Guardar Hash para un archivo dado su Identificador",
 					"params": {
 						"hash": "Hash del archivo",
 						"id": "Identificador del archivo"
 					}
+				},
+				"storeHashMulti(uint256[],bytes32[])": {
+					"details": "Almacena multiples hash para varios archivos Como la implementacion requiere vincular los hash a un identificador unico (del negocio) se esperan 2 colecciones, una con los hashes, y la otra con los id's de los archivos hasheados"
 				}
 			},
 			"title": "Integridad de archivos",
@@ -87,11 +108,11 @@
 	},
 	"sources": {
 		"contracts/Integridad.sol": {
-			"keccak256": "0x56114118147d94a6055a6de731116f758eb5d46d6540263b44bdad0b8e1ce735",
+			"keccak256": "0xcd07641f92576f48e5a5048e1be7c0205d08acf76e69225fa9c2a2f7d0eddaed",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://778db071b849fd00a325df298f7b5a5a30d70999bb99bcce5ef2eeb62a674f73",
-				"dweb:/ipfs/QmXaPiRUt1ZkmtNCLLyQoA3uwukAbHTaBWRjBJ3CcFmS6u"
+				"bzz-raw://bcfdfc3b9a25368378ace31d4349bb2d2781f4dbc3066531b51d162736068ccd",
+				"dweb:/ipfs/QmQFcsEwYKZi8jYuQ3fvDXeizKsKWEfam4apjUZ4ANJLev"
 			]
 		}
 	},
