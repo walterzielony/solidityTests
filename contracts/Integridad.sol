@@ -30,7 +30,7 @@ contract Integridad {
 
     /**
      * @dev Almacena multiples hash para varios archivos
-     * Como la implementacion requiere vincular los hash a un identificador unico (del negocio) se
+     * Como la implementacion requiere vincular los hash a un identificador unico (requerimiento del negocio) se
      * esperan 2 colecciones, una con los hashes, y la otra con los id's de los archivos hasheados
      */
     function storeHashMulti( uint256[] memory idList, bytes32[] memory hashList ) public {
@@ -46,7 +46,8 @@ contract Integridad {
     }
 
     /**
-    * No se utilizan eventos porque la implementacion no requiere ni recomienda administrar informacion sobre los bloques de la blockchain que contienen la informacion ni ningun otro aspecto de la implementacion de este metodo de validacion de integridad de archivos.
+    * No se utilizan eventos porque la implementacion no requiere ni recomienda administrar informacion sobre los bloques de la blockchain que contienen la informacion;
+    * ni tampoco divulgar ningun otro aspecto de la implementacion de este metodo de validacion de integridad de archivos.
     **/
 
      
