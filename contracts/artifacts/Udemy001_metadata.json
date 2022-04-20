@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "saludo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/udemy001.sol": "Udemy001"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/udemy001.sol": {
+			"keccak256": "0xcc2e01f956b1144faac0382bca46a2a2180ecd4b1f162cc600587438a124ed06",
+			"urls": [
+				"bzz-raw://653bac7dba6d59b987d119e2ff617d2051cee878fb291ea705e856d4211d5824",
+				"dweb:/ipfs/QmcJAdFYCwiTVstuPYSVZU4B6FBcF2GRSyBjRF7WVUcqUG"
+			]
+		}
+	},
+	"version": 1
+}
