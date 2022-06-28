@@ -1,5 +1,5 @@
 //pragma solidity >=0.7.0 <0.9.0; // mejor y mas seguro es dejarlo lockeado a una version
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.6;
 
 contract Udemy001 {
     
@@ -73,7 +73,7 @@ contract Udemy001 {
     uint public balanceReceived;
     function recieveMoney() public payable {
         balanceReceived+=msg.value;
-        // guardo el timestamp DEL MINADO DEL BLOQUE mas cieto tiempo
+        // guardo el timestamp DEL MINADO DEL BLOQUE mas cierto tiempo
         lockedUntil = block.timestamp + 5 seconds;
     }
 
@@ -83,8 +83,16 @@ contract Udemy001 {
 
     function withdraw () public {
         if (lockedUntil < block.timestamp) {
-            address payable to = msg.sender;
+            address payable to = payable(msg.sender);
             to.transfer (this.getContractBalance());
+        }
+    }
+
+    function withdrawAll (address payable _to) public {
+        if (lockedUntil < block.timestamp) {
+            require (msg.sender == owner, "You are not the owner");
+            require (!paused, "Contract is Paused");
+            _to.transfer (this.getContractBalance());
         }
     }
 
@@ -100,6 +108,26 @@ contract Udemy001 {
         if (amt < address(this).balance) {
             _to.transfer(amt);
         }
+    }
+
+    function sendTo () public payable {
+        // Sends money to the Smart Contract
+    }
+
+    /*
+    Start Stop
+    */
+
+    bool public paused; // initialized false
+    function setPaused (bool _val) public {
+        require (msg.sender == owner, "You are not the owner");
+        paused = _val;
+    }
+
+    //_address: direccion que recibira los fondos restantes del contrato
+    function destroySmartContract (address payable _to) public {
+        require (msg.sender == owner, "You are not the owner, cannot destroy");
+        selfdestruct (_to);
     }
 
 
