@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 //pragma solidity >=0.7.0 <0.9.0; // mejor y mas seguro es dejarlo lockeado a una version
 pragma solidity ^0.8.6;
 
@@ -8,7 +10,7 @@ contract Udemy001 {
     OWNERSHIP of a contract
 
     */
-    address owner;
+    address public owner;
     constructor () public {
         owner = msg.sender;
     }
