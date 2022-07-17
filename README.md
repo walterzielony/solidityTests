@@ -1,1 +1,1 @@
-Solidity Test Projects
+Solidity Test Projects from UDEMY course
